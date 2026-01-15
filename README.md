@@ -1,18 +1,13 @@
-## Getting Started
+# Escuela Politécnica Nacional
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Programación II
 
-## Folder Structure
+##  Prueba II
 
-The workspace contains two folders by default, where:
+Nombre: Ariana Thais Alomoto Granizo, Josue Sebastian Astudillo Campos
+Cedula: 1726965542, 171751455096
+Curso: GR2SW
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+# Enlace repositorio  GitHub:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+https://github.com/Ariana0-0/aaPrueba_BII.git
