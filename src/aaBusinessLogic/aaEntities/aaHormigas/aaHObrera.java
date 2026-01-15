@@ -1,13 +1,16 @@
-package aaBusinessLogic.aaEntities;
+package aaBusinessLogic.aaEntities.aaHormigas;
 
-public class aaHReina  extends aaHormiga {
+import aaBusinessLogic.aaEntities.aaAlimento.aaAlimento;
+import aaBusinessLogic.aaEntities.aaAlimento.aaHerbivoro;
+
+public class aaHObrera  extends aaHormiga {
     @Override
     public Boolean aacomer(aaAlimento alimento) {
         if (alimento == null) {
             morir();
             return false;
         }
-        if (alimento instanceof aaNectarivoros) {
+        if (alimento instanceof aaHerbivoro) {
             return true;
         } else {
             morir();
@@ -16,6 +19,6 @@ public class aaHReina  extends aaHormiga {
     }
     @Override
     public String toString() {
-        return "HReina {}";
+        return "HObrera {}";
     }
 }

@@ -1,6 +1,6 @@
 package aaBusinessLogic.aaInterfaces;
 
-import aaBusinessLogic.aaEntities.aaAlimento;  
+import aaBusinessLogic.aaEntities.aaAlimento.aaAlimento;  
 
 public interface IaaHormiga {
 

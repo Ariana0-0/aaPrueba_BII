@@ -2,22 +2,23 @@ package App;
 
 import java.util.List;
 import java.util.Scanner;
+
 import App.aaConsoleApp.aaUsuario;
-import aaBusinessLogic.aaETLProcesador;
-import aaBusinessLogic.aaEntities.aaAlimento;
-import aaBusinessLogic.aaEntities.aaHormiga;
+import aaBusinessLogic.aaEntities.aaAlimentarHormiga;
+import aaBusinessLogic.aaEntities.aaAlimento.*;
+import aaBusinessLogic.aaEntities.aaHormigas.*;
 
 //Refactorización se agrego esta clase
 
 public class aaControllerUsuario {
 
-    private static final int MAX_INTENTOS = 3;
+    private static final int aaMaxIntentos = 3;
 
     public boolean validarUsuario(aaUsuario user) {
         Scanner sc = new Scanner(System.in);
-        int intentos = MAX_INTENTOS;
+        int aaintentos = aaMaxIntentos;
 
-        while (intentos > 0) {
+        while (aaintentos > 0) {
             System.out.print("Ingrese usuario: ");
             String usuarioInput = sc.nextLine();
 
@@ -37,11 +38,14 @@ public class aaControllerUsuario {
                 
                 List<aaHormiga> hormigas = etl.extraerHormigas(rutaHormigas);
                 List<aaAlimento> alimentos = etl.extraerAlimentos(rutaAlimentos);
+                aaAlimentarHormiga gestor = new aaAlimentarHormiga();
+                gestor.alimentarHormigas(hormigas, alimentos);
+
 
                 return true;
             } else {
-                intentos--;
-                System.out.println("Credenciales incorrectas. Le quedan " + intentos + " intentos.");
+                aaintentos--;
+                System.out.println("Credenciales incorrectas. Le quedan " + aaintentos + " intentos.");
             }
         }
 

@@ -1,4 +1,4 @@
-package aaBusinessLogic.aaEntities;
+package aaBusinessLogic.aaEntities.aaAlimento;
 
 import aaBusinessLogic.aaInterfaces.IaaIngestaNativa;
 

@@ -1,13 +1,10 @@
-//  © 2K26 ❱──💀──❰ pat_mic ? code is life : life is code
-
-import java.util.List;
 
 import App.aaControllerUsuario;
 import App.aaConsoleApp.aaUsuario;
-import aaBusinessLogic.aaETLProcesador;
-import aaBusinessLogic.aaEntities.aaAlimento;
-import aaBusinessLogic.aaEntities.aaHLarva;
-import aaBusinessLogic.aaEntities.aaHormiga;
+//import aaBusinessLogic.aaETLProcesador;
+//import aaBusinessLogic.aaEntities.aaAlimento.aaAlimento;
+//import aaBusinessLogic.aaEntities.aaHormigas.aaHLarva;
+//import aaBusinessLogic.aaEntities.aaHormigas.aaHormiga;
 
 public class App {
     public static void main(String[] args)   {

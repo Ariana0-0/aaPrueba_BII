@@ -1,7 +1,9 @@
 package aaBusinessLogic.aaEntities;
 import aaBusinessLogic.aaInterfaces.IaaIngestaNativa;
-import aaBusinessLogic.aaEntities.aaAlimento;
-import aaBusinessLogic.aaEntities.aaGenoAlimento;
+import aaBusinessLogic.aaEntities.aaAlimento.aaAlimento;
+import aaBusinessLogic.aaEntities.aaSexos.aaX;
+import aaBusinessLogic.aaEntities.aaSexos.aaXX;
+import aaBusinessLogic.aaEntities.aaSexos.aaXY;
 
 import java.util.Random;
 

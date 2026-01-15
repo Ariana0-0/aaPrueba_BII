@@ -29,7 +29,6 @@ public class aaLector {
                     String limpio = limpiar(t);
                     if (!limpio.isEmpty()) {
                         hormigas.add(limpio);
-                        System.out.println("\u001B[34m[HORMIGA LEIDA] " + limpio + "\u001B[0m");
                     }
                 }
             }
@@ -60,7 +59,6 @@ public class aaLector {
                          limpio.contains("INSECTIVORO"))) {
 
                         alimentos.add(limpio);
-                        System.out.println("\u001B[34m[OK ALIMENTO LEIDO] " + limpio + "\u001B[0m");
                     } else {
                         System.out.println("\u001B[31m[ALIMENTO NO VALIDO] " + t + "\u001B[0m");
                     }

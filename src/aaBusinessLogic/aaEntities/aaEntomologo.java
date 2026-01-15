@@ -1,9 +1,9 @@
 package aaBusinessLogic.aaEntities;
-import java.util.Iterator;
+//import java.util.Iterator;
 import java.util.List;
 import aaBusinessLogic.aaInterfaces.IaaEntomologo;
-import aaBusinessLogic.aaEntities.aaAlimento;
-import aaBusinessLogic.aaEntities.aaGenoAlimento;
+import aaBusinessLogic.aaEntities.aaAlimento.aaAlimento;
+import aaBusinessLogic.aaEntities.aaHormigas.aaHormiga;
 
 public abstract class aaEntomologo implements IaaEntomologo {
     protected List<aaHormiga> AntNest;

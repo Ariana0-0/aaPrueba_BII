@@ -1,11 +1,14 @@
-package aaBusinessLogic;
+package App;
 
-import aaBusinessLogic.aaEntities.*;
-import java.text.Normalizer;
+import aaBusinessLogic.aaLector;
+import aaBusinessLogic.aaEntities.aaAlimento.*;
+import aaBusinessLogic.aaEntities.aaHormigas.*;
+//import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
 public class aaETLProcesador {
+    private aaLoading spinner = new aaLoading(20);
 
     private static final String[] TIPOS_HORMIGA = {
         "HLARVA", "HZANGANO", "HSOLDADO", "HREINA", "HOBRERA", "HRASTREADORA"
@@ -21,6 +24,7 @@ public class aaETLProcesador {
                 if (linea.contains(tipo)) {
                     aaHormiga h = crearHormiga(tipo);
                     if (h != null) {
+                        spinner.mostrar();
                         System.out.println("\u001B[34m[OK HORMIGA] " + tipo + "\u001B[0m");
                         hormigas.add(h);
                         encontrado = true;
@@ -28,6 +32,7 @@ public class aaETLProcesador {
                 }
             }
             if (!encontrado) {
+                spinner.mostrar();
                 System.out.println("\u001B[31m[ERROR HORMIGA] " + linea + "\u001B[0m");
             }
         }
@@ -42,9 +47,11 @@ public class aaETLProcesador {
         for (String linea : datosCrudos) {
             aaAlimento a = crearAlimento(linea);
             if (a != null) {
+                spinner.mostrar();
                 System.out.println("\u001B[34m[OK ALIMENTO OBJETO] " + linea + "\u001B[0m");
                 alimentos.add(a);
             } else {
+                spinner.mostrar();
                 System.out.println("\u001B[31m[ERROR CREANDO ALIMENTO] " + linea + "\u001B[0m");
             }
         }

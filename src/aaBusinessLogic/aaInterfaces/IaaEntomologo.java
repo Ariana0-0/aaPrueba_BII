@@ -1,7 +1,8 @@
 package aaBusinessLogic.aaInterfaces;
 
-import aaBusinessLogic.aaEntities.aaAlimento;
-import aaBusinessLogic.aaEntities.aaHormiga;
+import aaBusinessLogic.aaEntities.aaAlimento.aaAlimento;
+import aaBusinessLogic.aaEntities.aaHormigas.aaHormiga;
+
 import java.util.List;
 
 public interface IaaEntomologo {
