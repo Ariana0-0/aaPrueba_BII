@@ -2,7 +2,7 @@
 
 ## Programación II
 
-##  Prueba II
+##  Prueba I
 
 Nombre: Ariana Thais Alomoto Granizo, Josue Sebastian Astudillo Campos
 Cedula: 1726965542, 171751455096
