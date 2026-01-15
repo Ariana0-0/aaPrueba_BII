@@ -1,17 +1,25 @@
 //  © 2K26 ❱──💀──❰ pat_mic ? code is life : life is code
 
-import App.aacontollerUsuario;
+import java.util.List;
+
+import App.aaControllerUsuario;
 import App.aaConsoleApp.aaUsuario;
+import aaBusinessLogic.aaETLProcesador;
+import aaBusinessLogic.aaEntities.aaAlimento;
 import aaBusinessLogic.aaEntities.aaHLarva;
+import aaBusinessLogic.aaEntities.aaHormiga;
 
 public class App {
     public static void main(String[] args)   {
             aaUsuario user = new aaUsuario("patmic", "123");
-            aacontollerUsuario controller = new aacontollerUsuario();controller.validarUsuario();
-        
-       //try {
+            aaControllerUsuario controller = new aaControllerUsuario();
+            boolean login = controller.validarUsuario(user);
+            
+
+
+            //try {
 //
-       //    aaHLarva l = new aaHLarva();
+       //    aaHLarva l= new aaHLarva();
        //     System.out.println( l.getLava(1).getNombre() );
 //
        //     for ( var larva : l.getLarvas() ) {

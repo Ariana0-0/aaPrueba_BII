@@ -1,12 +1,16 @@
 package aaBusinessLogic.aaEntities;
+import java.util.Iterator;
+import java.util.List;
 import aaBusinessLogic.aaInterfaces.IaaEntomologo;
 import aaBusinessLogic.aaEntities.aaAlimento;
 import aaBusinessLogic.aaEntities.aaGenoAlimento;
 
 public abstract class aaEntomologo implements IaaEntomologo {
-    public aaAlimento preparar(aaAlimento alimento){
+    protected List<aaHormiga> AntNest;
+    protected List<aaAlimento> AntFood;
 
-        System.out.println("[Preparado]---< tipo: " + alimento.getTipo() + ">");
+    public aaAlimento preparar(aaAlimento alimento) {
+        System.out.println("[Preparado]---< tipo: " + alimento.getTipo() + " >");
         return alimento;
     }
 }

@@ -6,24 +6,27 @@ import aaBusinessLogic.aaEntities.aaGenoAlimento;
 import java.util.Random;
 
 
-public class aaEtGenetista extends aaEntomologo {
+public abstract class aaEtGenetista extends aaEntomologo {
 
     @Override
     public aaAlimento preparar(aaAlimento alimento) {
-       aaGenoAlimento genoma = generarGenoAleatorio();
 
-       if(alimento instanceof IaaIngestaNativa){
-           ((IaaIngestaNativa) alimento).aainyectar(genoma);
-       }
-       System.out.println("[Preparado]---< tipo: " + alimento.getTipo() + "+"+ genoma.getTipo() + ">");
-       return alimento;
+        aaGenoAlimento genoma = generarGenoAleatorio();
+
+        if (alimento instanceof IaaIngestaNativa) {
+            ((IaaIngestaNativa) alimento).aainyectar(genoma);
+        }
+
+        System.out.println("[Preparado]---< tipo: "
+                + alimento.getTipo() + " + " + genoma.getTipo() + " >");
+
+        return alimento;
     }
-
-
 
     private aaGenoAlimento generarGenoAleatorio() {
         Random rand = new Random();
         int opcion = rand.nextInt(3);
+
         switch (opcion) {
             case 0:
                 return new aaX();
@@ -33,5 +36,4 @@ public class aaEtGenetista extends aaEntomologo {
                 return new aaXY();
         }
     }
-
 }
