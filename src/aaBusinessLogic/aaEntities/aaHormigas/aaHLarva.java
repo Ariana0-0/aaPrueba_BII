@@ -27,7 +27,7 @@ public class aaHLarva extends aaHormiga {
     }
     @Override
     public String toString() {
-        return "HLarva {}";
+        return "HLarva";
     }
 }
 

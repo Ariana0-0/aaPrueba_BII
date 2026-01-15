@@ -19,6 +19,6 @@ public class aaHObrera  extends aaHormiga {
     }
     @Override
     public String toString() {
-        return "HObrera {}";
+        return "HObrera";
     }
 }

@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+// Tefactorización
+
 public class aaAlimentarHormiga {
 
     private Random random = new Random();
@@ -29,9 +31,8 @@ public class aaAlimentarHormiga {
                 continue;
             }
 
-            // Si es Omnívoro y tiene genoma, aplicamos super habilidad
             if (alimentoElegido instanceof aaOmnivoro) {
-                String sexo = generarSexoAleatorio(); // XX o XY
+                String sexo = generarSexoAleatorio();
                 System.out.println("[INFO] Omnívoro modificado, sexo: " + sexo);
 
                 if (sexo.equals("XX")) {
@@ -50,7 +51,6 @@ public class aaAlimentarHormiga {
             }
         }
 
-        // RESUMEN FINAL SOLO NUMEROS
         System.out.println("\n===== RESUMEN =====");
         System.out.println("Hormigas vivas: " + vivas.size());
         System.out.println("Hormigas muertas: " + muertas.size());
@@ -67,7 +67,9 @@ public class aaAlimentarHormiga {
     }
 
     private String generarSexoAleatorio() {
-        return random.nextBoolean() ? "XX" : "XY";
+         String[] sexos = {"X", "XX", "XY"}; // agregamos "X"
+         int index = (int)(Math.random() * sexos.length);
+         return sexos[index];
     }
 
     private void activarSuperVolar(aaHormiga h) {

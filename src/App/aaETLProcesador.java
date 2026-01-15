@@ -7,6 +7,8 @@ import aaBusinessLogic.aaEntities.aaHormigas.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//Refaxctorizacion: Se creo esta clase para procesar la extraccion de datos
+
 public class aaETLProcesador {
     private aaLoading spinner = new aaLoading(20);
 
@@ -48,11 +50,11 @@ public class aaETLProcesador {
             aaAlimento a = crearAlimento(linea);
             if (a != null) {
                 spinner.mostrar();
-                System.out.println("\u001B[34m[OK ALIMENTO OBJETO] " + linea + "\u001B[0m");
+                System.out.println("\u001B[34m[OK ALIMENTO] " + linea + "\u001B[0m");
                 alimentos.add(a);
             } else {
                 spinner.mostrar();
-                System.out.println("\u001B[31m[ERROR CREANDO ALIMENTO] " + linea + "\u001B[0m");
+                System.out.println("\u001B[31m[ERROR ALIMENTO] " + linea + "\u001B[0m");
             }
         }
         return alimentos;

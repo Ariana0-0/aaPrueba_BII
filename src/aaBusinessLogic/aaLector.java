@@ -5,6 +5,8 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
+//Refactorizacion se creo esta clase y ya no se hace en la interfaz directamente
+
 public class aaLector {
 
     private static String limpiar(String raw) {
@@ -22,7 +24,6 @@ public class aaLector {
 
             String linea;
             while ((linea = br.readLine()) != null) {
-                // separa por guiones o espacios
                 String[] tokens = linea.split("[-\\s]+");
                 for (String t : tokens) {
                     if (t == null || t.trim().isEmpty()) continue;
