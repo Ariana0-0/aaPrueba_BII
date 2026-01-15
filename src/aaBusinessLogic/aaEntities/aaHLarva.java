@@ -1,9 +1,8 @@
 package aaBusinessLogic.aaEntities;
 
-import java.util.List;
-
 import aaDataAccess.aaDTOs.HormigaDTO;
 import aaInfrastructure.AppException;
+import java.util.List;
 
 public class aaHLarva extends aaHormiga {
 
@@ -17,7 +16,7 @@ public class aaHLarva extends aaHormiga {
     }
     
     public aaHormiga comer(String comida) {
-        if (comida.equals("carne")) {
+        if (comida.equals("carne y vegetales")) {
             return new aaHSoldado();
         }
         return this;
